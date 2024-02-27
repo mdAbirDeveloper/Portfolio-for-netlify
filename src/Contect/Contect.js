@@ -5,7 +5,7 @@ import { AuthContext } from '../Authenticatio/Authenticatio';
 const Contect = () => {
 
     const {user} = useContext(AuthContext);
-    console.log(user)
+    // console.log(user)
 
     return (
         <div>

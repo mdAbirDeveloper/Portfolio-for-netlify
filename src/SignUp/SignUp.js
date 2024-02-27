@@ -13,7 +13,7 @@ const SignUp = () => {
     const email = form.email.value;
     const password = form.password.value;
     const userData = { name, email, password };
-    console.log(name, email, password);
+    // console.log(name, email, password);
     fetch(`https://my-portfolio-server-eight-beta.vercel.app/user`, {
       method: "POST",
       headers: {
@@ -28,7 +28,7 @@ const SignUp = () => {
 
     signUp(email, password)
       .then((user) => {
-        console.log(user);
+        // console.log(user);
         navigate("/");
         form.reset();
       })

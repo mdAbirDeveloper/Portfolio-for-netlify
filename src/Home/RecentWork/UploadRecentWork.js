@@ -47,7 +47,7 @@ const UploadRecentWork = () => {
       if(!mongoDBResponse.ok){
         throw new Error(`Faild to Add work history, with ${mongoDBResponse.status}`)
       }
-    console.log(workDetail);
+    // console.log(workDetail);
     const result = await mongoDBResponse.json();
     console.log(result, "submitted successfully");
     // navigate('/blog');

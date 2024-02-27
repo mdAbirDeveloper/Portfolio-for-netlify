@@ -19,7 +19,7 @@ const RecentWork = () => {
     return <p>Error: {error.message}</p>;
   }
 
-  console.log(data);
+  // console.log(data);
   return (
     <div className="my-10">
       <h1 className="text-4xl font-bold mt-16 text-green-700">RecentWork</h1>

@@ -16,7 +16,7 @@ const AllBlog = ({ blogs, isAdmin, onDelete }) => {
       });
 
       if (response.ok) {
-        console.log("Blog deleted successfully");
+        // console.log("Blog deleted successfully");
         // Optionally, you can trigger a callback function (onDelete) to update the UI
         onDelete && onDelete(id);
       } else {

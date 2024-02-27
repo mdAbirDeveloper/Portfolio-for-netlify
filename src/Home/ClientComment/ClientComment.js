@@ -11,7 +11,7 @@ const ClientComment = () => {
   const { user } = useContext(AuthContext);
   const onSubmit = (data) => {
     const image = data.image[0];
-    console.log(image);
+    // console.log(image);
     const formData = new FormData();
     formData.append("image", image);
     const url = `https://api.imgbb.com/1/upload?key=d1fbaa0b9f043f285b08e6d997b387ef`;
@@ -29,7 +29,7 @@ const ClientComment = () => {
           comment: data.comment,
           image: imgdata.data.url,
         };
-        console.log(imgdata);
+        // console.log(imgdata);
 
         //send data on mongodb
         fetch("https://my-portfolio-server-eight-beta.vercel.app/protfolio", {
@@ -41,7 +41,7 @@ const ClientComment = () => {
         })
           .then((res) => res.json())
           .then((reuslt) => {
-            console.log(reuslt);
+            // console.log(reuslt);
           });
       });
   };
