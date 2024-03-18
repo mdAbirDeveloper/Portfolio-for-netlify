@@ -5,7 +5,7 @@ import { AuthContext } from "../../Authenticatio/Authenticatio";
 
 const Blog = () => {
   const {user} = useContext(AuthContext);
-  const isAdmin = user?.email === 'jalal.profession@gmail.com'
+  const isAdmin = user?.email === 'mdsahjalal9778@gmail.com'
   const {
     data: blogData,
     isLoading,

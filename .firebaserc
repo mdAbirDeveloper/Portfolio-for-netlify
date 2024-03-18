@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "jalal-munshi"
-  }
+    "default": "jalal-developer",
+    "developer": "jalal-developer"
+  },
+  "targets": {},
+  "etags": {}
 }

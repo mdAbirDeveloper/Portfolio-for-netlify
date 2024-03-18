@@ -5,7 +5,7 @@ import manuLogo from "./default.png";
 
 const Navber = () => {
   const { user, signOutUser } = useContext(AuthContext);
-  const isAdmin = user?.email === "jalal.profession@gmail.com";
+  const isAdmin = user?.email === "mdsahjalal9778@gmail.com";
 
   const menuItem = (
     <>

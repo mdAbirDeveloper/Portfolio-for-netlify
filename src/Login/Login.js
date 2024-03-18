@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import toastr from 'reactjs-toastr/lib/react-toast';
 import { AuthContext } from '../Authenticatio/Authenticatio';
@@ -6,7 +6,8 @@ import { AuthContext } from '../Authenticatio/Authenticatio';
 const Login = () => {
 
     const {signIn} = useContext(AuthContext);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const [error, setError] = useState('');
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -21,7 +22,8 @@ const Login = () => {
             toastr.success('user login successfully')
         })
         .then(err => {
-            console.log(err)
+            console.log(err);
+            setError(err)
         })
 
     }
@@ -43,6 +45,7 @@ const Login = () => {
                                 <span className="label-text">Password</span>
                             </label>
                             <input type="password" name='password' required placeholder="password" className="input input-bordered" />
+                            <p>{error}</p>
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary" type='submit'>Login</button>
